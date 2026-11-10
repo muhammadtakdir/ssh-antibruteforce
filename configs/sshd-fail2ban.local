@@ -1,0 +1,13 @@
+# ==============================================================================
+# Fail2ban Jail Tambahan untuk SSH (Ubuntu / Debian)
+# Lokasi file target: /etc/fail2ban/jail.d/99-sshd-hardening.local
+# ==============================================================================
+
+[sshd]
+enabled = true
+port = ssh
+filter = sshd
+maxretry = 3
+findtime = 10m
+bantime = 1d
+bantime.increment = true
